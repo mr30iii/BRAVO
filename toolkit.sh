@@ -74,25 +74,25 @@ echo
 }
 
 # -------------------
-# List Entries
+# List Entries (ID + Label only)
 # -------------------
 list_entries() {
     show_banner
-    echo -e "${YELLOW}${BOLD}ID | LABEL         | TYPE | PAYLOAD${RESET}"
-    echo -e "${CYAN}----------------------------------------------${RESET}"
+    echo -e "${YELLOW}${BOLD}ID | LABEL${RESET}"
+    echo -e "${CYAN}----------------------${RESET}"
     tail -n +2 "$DB" | while IFS='|' read -r id label type payload notes; do
-        printf "${GREEN}%2s${RESET} | ${MAGENTA}%-12s${RESET} | ${BLUE}%-3s${RESET} | %s\n" "$id" "$label" "$type" "$payload"
+        printf "${GREEN}%2s${RESET} | ${MAGENTA}%-20s${RESET}\n" "$id" "$label"
     done
-    echo -e "${CYAN}----------------------------------------------${RESET}"
+    echo -e "${CYAN}----------------------${RESET}"
     read -p "Press ENTER to continue..."
 }
 
 # -------------------
-# Open Entry by ID
+# Open Entry by ID (show link after selection)
 # -------------------
 open_entry() {
     show_banner
-    read -p "Enter ID to open/run: " id
+    read -p "Enter ID to view/run: " id
     line=$(awk -F'|' -v id="$id" '$1==id {print; exit}' "$DB")
     if [[ -z "$line" ]]; then
         echo -e "${RED}ID not found.${RESET}"
@@ -100,13 +100,17 @@ open_entry() {
         return
     fi
     IFS='|' read -r i label type payload notes <<< "$line"
+    echo -e "${CYAN}Selected: ${BOLD}$label${RESET}"
+    echo -e "${YELLOW}Link/Command: ${BLUE}$payload${RESET}"
+    
     if [[ "$type" == "url" ]]; then
+        read -p "Press ENTER to open this URL..." 
         loading "Opening URL"
         termux-open-url "$payload" 2>/dev/null || echo -e "${RED}Could not open URL${RESET}"
     else
-        echo -e "${RED}Type '$type' not supported in this starter${RESET}"
+        echo -e "${RED}Type '$type' not supported${RESET}"
     fi
-    read -p "Press ENTER..."
+    read -p "Press ENTER to return..."
 }
 
 # -------------------
@@ -139,7 +143,7 @@ while true; do
     echo -e "${MAGENTA}==============${RESET}"
     read -p "Choose: " choice
     case "$choice" in
-        1) list_entries ;;  # FIXED: previously GIFTS_LIST
+        1) list_entries ;;
         2) open_entry ;;
         3) add_entry ;;
         4) echo -e "${RED}Goodbye!${RESET}"; exit 0 ;;
