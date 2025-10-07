@@ -41,10 +41,20 @@ _(All entries are stored in `~/.termux_toolkit_db`)_
 
 ```bash
 pkg update && pkg upgrade
-pkg install git
-git clone https://github.com/mr30iii/BRAVO.git
-cd BRAVO
-chmod +x toolkit.sh
-./toolkit.sh
-
 ```
+```
+pkg install git
+```
+```
+git clone https://github.com/mr30iii/BRAVO.git
+```
+```
+cd BRAVO
+```
+```
+chmod +x toolkit.sh
+```
+```
+./toolkit.sh
+```
+
