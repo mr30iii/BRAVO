@@ -10,25 +10,25 @@ DB="$HOME/.termux_toolkit_db"
 if ! [[ -f "$DB" ]]; then
 cat > "$DB" <<'DB'
 1|Lazymux|url|https://github.com/Gameye98/Lazymux.git|GIFTED BY RAJA FOR BRAVO
-2|Termux API|url|https://github.com/termux/termux-api|GIFTED BY RAJA FOR BRAVO
+2|TermuxArch|url|https://github.com/SDRausty/TermuxArch.git|GIFTED BY RAJA FOR BRAVO
 3|Termux Widget|url|https://github.com/termux/termux-widget|GIFTED BY RAJA FOR BRAVO
 4|Termux Tasker|url|https://github.com/termux/termux-tasker|GIFTED BY RAJA FOR BRAVO
 5|Termux Boot|url|https://github.com/termux/termux-boot|GIFTED BY RAJA FOR BRAVO
 6|Termux Styling|url|https://github.com/termux/termux-styling|GIFTED BY RAJA FOR BRAVO
 7|Termux API|url|https://github.com/termux/termux-api|GIFTED BY RAJA FOR BRAVO
-8|Termux Widget|url|https://github.com/termux/termux-widget|GIFTED BY RAJA FOR BRAVO
-9|Termux Tasker|url|https://github.com/termux/termux-tasker|GIFTED BY RAJA FOR BRAVO
-10|Termux Boot|url|https://github.com/termux/termux-boot|GIFTED BY RAJA FOR BRAVO
-11|Termux Styling|url|https://github.com/termux/termux-styling|GIFTED BY RAJA FOR BRAVO
-12|Termux API|url|https://github.com/termux/termux-api|GIFTED BY RAJA FOR BRAVO
-13|Termux Widget|url|https://github.com/termux/termux-widget|GIFTED BY RAJA FOR BRAVO
-14|Termux Tasker|url|https://github.com/termux/termux-tasker|GIFTED BY RAJA FOR BRAVO
-15|Termux Boot|url|https://github.com/termux/termux-boot|GIFTED BY RAJA FOR BRAVO
-16|Termux Styling|url|https://github.com/termux/termux-styling|GIFTED BY RAJA FOR BRAVO
-17|Termux API|url|https://github.com/termux/termux-api|GIFTED BY RAJA FOR BRAVO
-18|Termux Widget|url|https://github.com/termux/termux-widget|GIFTED BY RAJA FOR BRAVO
-19|Termux Tasker|url|https://github.com/termux/termux-tasker|GIFTED BY RAJA FOR BRAVO
-20|Termux Boot|url|https://github.com/termux/termux-boot|GIFTED BY RAJA FOR BRAVO
+8|Termux Kali|url|https://github.com/MasterDevX/Termux-Kali.git|GIFTED BY RAJA FOR BRAVO
+9|Termux WhatsApp Bot|url|https://github.com/RyzRdy/termux-whatsapp-bot.git|GIFTED BY RAJA FOR BRAVO
+10|Awesome Termux Hacking|url|https://github.com/may215/awesome-termux-hacking.git|GIFTED BY RAJA FOR BRAVO
+11|Termux EasY Hack|url|https://github.com/sabri-zaki/EasY_HaCk.git|GIFTED BY RAJA FOR BRAVO
+12|ZeroTermux|url|https://github.com/hanxinhao000/ZeroTermux.git|GIFTED BY RAJA FOR BRAVO
+13|Termux Card Number|url|https://github.com/INDOnimous/Card-Number.git|GIFTED BY RAJA FOR BRAVO
+14|Termux Banner|url|https://github.com/Bhai4You/Termux-Banner.git|GIFTED BY RAJA FOR BRAVO
+15|TermuxAlpine|url|https://github.com/Hax4us/TermuxAlpine.git|GIFTED BY RAJA FOR BRAVO
+16|Termux Command Handbook|url|https://github.com/BlackTechX011/Termux-Command-Handbook.git|GIFTED BY RAJA FOR BRAVO
+17|Termux WhatsApp Bot|url|https://github.com/Fxc7/termux-bot-wa.git|GIFTED BY RAJA FOR BRAVO
+18|Termux 4 All|url|https://github.com/ShanSuharban/termux4all.git|GIFTED BY RAJA FOR BRAVO
+19|Termux.git|url|https://github.com/roccomuso/termux.git|GIFTED BY RAJA FOR BRAVO
+20|Termux Kumpulan Scripts|url|https://github.com/landy22granatt/Kumpulan-Script-Termux.git|GIFTED BY RAJA FOR BRAVO
 DB
 fi
 
